@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+/*--------------------------------EJERCICIO COMPLETO CON AREAS-------------------------------- */
+#webside-area * {
+  margin: 0;
+  padding: 0;
+}
+
+#webside-area {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 150px 70px 1fr 70px;
+  grid-template-areas: 
+  "cabecera cabecera cabecera cabecera cabecera"
+  "menu menu menu menu menu"
+  "contenido contenido contenido contenido lateral"
+  "pie pie pie pie pie";
+
+  /* grid-gap: 10px; separa filas y columnas
+  grid-row-gap: 10px; separa las filas
+  grid-column-gap: 10px; separa las columnas   */
+  
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+
+}
+
+#webside-area #cabecera{
+  grid-area: cabecera;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000ff;
+  color: #fff;
+}
+
+#webside-area #menu {
+  grid-area: menu;
+  background-color: lightsteelblue;
+  color: #000;
+  line-height: 70px;
+}
+
+#webside-area #menu ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#webside-area #contenido {
+  grid-area: contenido;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+  background-color: #eee;
+
+}
+
+#webside-area #contenido article {
+  background-color: #ccc;
+  border: 1px solid #555;
+}
+
+#webside-area #lateral {
+  grid-area: lateral;
+  background-color: orange;
+  color: #fff;
+}
+
+#webside-area #pie {
+  grid-area: pie;
+  background-color: #000;
+  color: #fff;
+}
+
+
+/*-------------------------------- EJERCICIO COMPLETO-------------------------------- */
+#webside * {
+  margin: 0;
+  padding: 0;
+}
+
+#webside {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 150px 70px 1fr 70px;
+
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+
+}
+
+#webside #cabecera{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/6;
+  background-color: #0000ff;
+  color: #fff;
+}
+
+#webside #menu {
+  grid-column: 1/6;
+  background-color: lightsteelblue;
+  color: #000;
+  line-height: 70px;
+}
+
+#webside #menu ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#webside #contenido {
+  grid-column: 1/5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+  background-color: #eee;
+
+}
+
+#webside #contenido article {
+  background-color: #ccc;
+  border: 1px solid #555;
+}
+
+#webside #lateral {
+  grid-column: 5/6;
+  background-color: orange;
+  color: #fff;
+}
+
+#webside #pie {
+  grid-column: 1/6;
+  background-color: #000;
+  color: #fff;
+}
+
+
+/*--------------------------------APRENDIENDO MAQUETACION CON CSS GRID--------------------------------*/
+.layout {
+  width: 80%;
+  min-height: 400px;
+  margin: 0px auto;
+
+  /*Definir el grid layout*/
+  display: grid;
+  /*Numero de columnas*/
+  grid-template-columns: repeat(3, 1fr);
+  /*Numero de filas*/
+  grid-template-rows: repeat(2, 1fr) 3fr;
+
+  /*Espacios entre elementos grid*/
+  grid-gap: 10px;
+  /* padding: 10px; */
+  border: 3px solid #000;
+}
+
+.caja {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding: 20px;
+  border: 4px solid #222;
+  margin: 10px;
+  background-color: #808080;
+}
+
+.red {
+  grid-column: 1/4;
+  background-color: #ff0000;
+}
+
+.blue {
+  background-color: #0000ff;
+  grid-row: 2/5;
+
+  /*Centrar el contenido del elemento*/
+  display: flex;
+  align-items: center;
+}
+
+.green {
+  background-color: #008000;
+  grid-column: 2/4;
+}
+
+.yellow {
+  background-color: #ffff00;
+  grid-row: 3/4;
+}
+
+.orange {
+  background-color: #ffa500;
+}
+
+.cyan {
+  background-color: #00ffff;
+  grid-column: 1/4;
+}
+
+/* @media(max-widht: 520px){
+  .layout {
+    grid-template-columns: 100%;
+
+  }
+} */

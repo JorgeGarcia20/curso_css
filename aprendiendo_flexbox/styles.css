@@ -1,0 +1,67 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+#layout{
+  display: flex;/*Los elemntos se alinean uno al lado del otro*/
+  
+  /*DIRECIONES EN FLEXBOX*/
+  flex-direction: row; /*Ordena los elementos en filas*/
+  /*flex-direction: column; Ordena los elementos en columnas*/
+  /*flex-direction: row-reverse; Cambia el orden de los elemntos*/
+  /*flex-direction: column-reverse;Cambia el orden de los elementos como columnas*/
+  /*flex-direction: unset; Quita la direccion y deja la direccion por defecto*/
+
+  /*flex-wrap: wrap;/*Ahora todos los elementos se ordenan de forma perfecta*/
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  height: 600px;
+
+  border: 3px solid black;
+  padding: 5px;
+
+  align-items: flex-start;
+
+}
+
+.caja{
+  /*flex-grow: 1; Hace que cada caja ocupe el mismo espacio*/
+  /*flex-basis: calc((100% / 3)- 80px);*/
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border: 4px solid #222;
+  margin: 10px;
+  background-color: gray; 
+  border-radius: 5px;
+}
+
+.red{
+  /*flex-grow: 8;*/
+  /*order: 4;podemos cambiar el orden*/
+  align-self: flex-start;
+  background-color: red;
+}
+.green{
+  /*flex-grow: 6;Aumenta el tamaño del elemento*/
+  /*order: 2;*/
+  margin: 10%;
+  background-color: green;
+}
+.blue{
+  /*flex-grow: 0;*/
+  /*flex-shrink: 0;Disminuye el tamaño del elemento*/
+  /*order: 1;*/
+  align-self: center;
+  background-color: blue;
+}
+.orange{
+  /*flex-grow: 4;*/
+  /*order: 3;*/
+  /*flex-basis: 100%; /*Minimo y maximo en tamaño*/
+  align-self: flex-end;
+  background-color: orange;
+}

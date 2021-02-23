@@ -1,0 +1,75 @@
+#menu {
+  height: 50px;
+}
+
+#menu ul {
+  text-decoration: none;
+  list-style: none;
+  line-height: 50px;
+}
+#menu ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.item{
+  height: 200px;
+}
+
+#formulario{
+  width: 70%;
+  height:300px;
+}
+
+footer {
+  height: 50px;
+  line-height: 50px;
+}
+
+.lateral {
+  height: 250px;
+}
+
+.lateral > div {
+  height: calc(250px /3);
+}
+
+@media (max-width: 994px){
+  #menu{
+    height: auto;
+  }
+}
+@media (max-width: 570px){
+  #menu{
+    height: auto;
+  }
+  #products{
+    width: 100%;
+  }
+
+  #lateral{
+    width: 100%;
+  }
+
+  #menu ul li a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px){
+  #menu{
+    height: auto;
+  }
+  #menu ul a {
+    width: 100%;
+  }
+}
+@media (max-width: 414px){
+  #menu{
+    height: auto;
+  }
+  #menu ul a{
+    width: 100%; 
+  }
+}
